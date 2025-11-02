@@ -33,7 +33,7 @@ Make sure you have the following libraries installed:
 
 pip install torch gymnasium matplotlib
 
-##How to Run
+## How to Run
 
 Clone this repository:
 
