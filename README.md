@@ -1,52 +1,59 @@
-#  Deep Q-Network (DQN) Implementation for CartPole-v1
+# Deep Q-Network (DQN) Implementation for CartPole-v1
 
-This project implements a **Deep Q-Network (DQN)** from scratch using **PyTorch** to solve the classic **CartPole-v1** reinforcement learning environment from **OpenAI Gymnasium**.
+This project implements a Deep Q-Network (DQN) from scratch using PyTorch to solve the classic CartPole-v1 reinforcement learning environment from OpenAI Gymnasium.
+The agent learns to balance a pole on a moving cart by trial and error — using experience replay and a target network for more stable training.
 
-The agent learns to balance a pole on a moving cart by trial and error — using **experience replay** and a **target network** for more stable training.
+## Project Overview
 
----
+Algorithm: Deep Q-Network (DQN)
 
-##  Project Overview
+Environment: CartPole-v1 (OpenAI Gymnasium)
 
-- **Algorithm:** Deep Q-Network (DQN)
-- **Environment:** CartPole-v1 (OpenAI Gymnasium)
-- **Framework:** PyTorch
-- **Goal:** Balance the pole as long as possible by learning optimal actions.
+Framework: PyTorch
 
----
+Goal: Balance the pole as long as possible by learning optimal actions.
 
-##  Key Features
+## Key Features
 
-- Custom DQN neural network architecture (3 fully-connected layers)
-- Epsilon-greedy action selection for exploration vs. exploitation
-- Replay memory for experience sampling
-- Soft update of target network weights (`tau`)
-- Visualization of training progress (episode durations)
-- Fully commented and educational code structure
+Custom DQN neural network architecture (3 fully-connected layers)
 
----
+Epsilon-greedy action selection for exploration vs. exploitation
 
-##  Dependencies
+Replay memory for experience sampling
+
+Soft update of target network weights (tau)
+
+Visualization of training progress (episode durations)
+
+Fully commented and educational code structure
+
+## Dependencies
 
 Make sure you have the following libraries installed:
 
-```bash
 pip install torch gymnasium matplotlib
 
-How to Run
+##How to Run
 
-Clone this repository:git clone https://github.com/<your-username>/cartpole-dqn.git
+Clone this repository:
+
+git clone https://github.com/<your-username>/cartpole-dqn.git
 cd cartpole-dqn
 
-Run the main file:python dqn_cartpole.py
+
+Run the main file:
+
+python dqn_cartpole.py
+
 
 A pygame window will open showing the CartPole environment while the agent trains.
 The training duration graph will update live using Matplotlib.
 
-Training Visualization
+## Training Visualization
 
-During training, episode durations are plotted to monitor the agent’s performance:
-Hyperparameters
+During training, episode durations are plotted to monitor the agent’s performance.
+
+## Hyperparameters
 | Parameter      | Description                 | Default |
 | -------------- | --------------------------- | ------- |
 | `batch_size`   | Replay memory sample size   | 128     |
@@ -59,21 +66,21 @@ Hyperparameters
 | `memory_size`  | Replay memory capacity      | 10,000  |
 | `num_episodes` | Number of episodes to train | 250     |
 
-Learning Objective
+## Learning Objective
 
 The DQN agent approximates the Q-value function using a neural network.
 It learns the expected cumulative reward for each action, allowing it to make optimal decisions to keep the pole balanced.
 
-Results
+## Results
 
 After sufficient training, the agent should be able to balance the pole for over 200 timesteps consistently.
 
-License
+## License
 
 This project is open source and available under the MIT License.
 
-Author
+## Author
 
 Ayberk Caf
 Reinforcement Learning Project — 2025
-Built with using PyTorch and OpenAI Gymnasium.
+Built using PyTorch and OpenAI Gymnasium.
